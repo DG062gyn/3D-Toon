@@ -1,28 +1,20 @@
-/* 
-   SYSTEM OVERRIDE: DESIGN SYSTEM DE ALTO ESCALÃO
-   PROTOCOLO: GRANDEUR-BLACK-GOLD
-*/
-
-@import url('https://googleapis.com');
+/* DESIGN SYSTEM INTEGRADO DG062 */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
 }
 
 body {
-    background-color: #030303; /* Escuridão pura */
+    background-color: #030303;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #ffffff;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* O Palco Principal: Textura Satinada de Alta Resolução */
+/* ================= PÁGINA 1: INDEX ================= */
 .card-container {
     position: relative;
     width: 100vw;
@@ -31,11 +23,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 80px; /* Amplo espaço de respiro aristocrático */
+    padding: 80px;
     overflow: hidden;
 }
 
-/* Linha Perimetral Laser em Ouro Champagne */
 .card-container::before {
     content: '';
     position: absolute;
@@ -48,28 +39,20 @@ body {
     z-index: 10;
 }
 
-/* O NOME MONUMENTAL: Tipografia Imperial com Brilho de Ouro Líquido */
-/* O NOME MONUMENTAL: Tipografia Imperial com Brilho de Ouro Líquido */
 .bg-title {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     font-family: 'Cinzel', serif;
-    font-size: clamp(2rem, 5vw, 5.5rem);
+    font-size: clamp(2rem, 6vw, 4.4rem);
     font-weight: 900;
     text-transform: uppercase;
-    
-    /* Efeito Metalizado de Luxo */
     background: linear-gradient(180deg, #ffffff 0%, #e5c07b 60%, #aa8443 100%);
-    background-clip: text; /* Versão padrão universal para o editor ficar feliz */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* Neon Dourado Sutil Atrás das Letras */
     filter: drop-shadow(0 0 30px rgba(229, 192, 123, 0.15));
-    
     white-space: nowrap;
     user-select: none;
     pointer-events: none;
@@ -77,8 +60,6 @@ body {
     letter-spacing: 12px;
 }
 
-
-/* Container Central Fluido */
 .main-character-wrapper {
     position: relative;
     width: 100%;
@@ -89,37 +70,32 @@ body {
     z-index: 2;
 }
 
-/* Bloco Inferior de Textos Corporativos */
 .bottom-left {
     position: relative;
     z-index: 3;
     max-width: 580px;
-    animation: fadeIn 1s ease-out;
 }
 
 .product-title {
     font-family: 'Cinzel', serif;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #e5c07b; /* Ouro Nobre */
+    color: #e5c07b;
     margin-bottom: 14px;
-    text-transform: uppercase;
     letter-spacing: 5px;
+    transition: opacity 0.3s ease;
 }
 
 .product-desc {
     font-size: 0.95rem;
-    font-weight: 200; /* Tipografia ultra fina premium */
+    font-weight: 200;
     color: #9da5b4;
     line-height: 1.8;
     margin-bottom: 35px;
+    transition: opacity 0.3s ease;
 }
 
-/* Botões Lapidados como Joias Circulares */
-.nav-buttons {
-    display: flex;
-    gap: 20px;
-}
+.nav-buttons { display: flex; gap: 20px; }
 
 .nav-btn {
     width: 55px;
@@ -143,18 +119,9 @@ body {
     transform: translateY(-2px);
 }
 
-.nav-btn svg {
-    width: 22px;
-    height: 22px;
-}
+.nav-btn svg { width: 22px; height: 22px; }
 
-/* Link de Acesso Exclusivo (Direita) */
-.bottom-right {
-    position: absolute;
-    bottom: 80px;
-    right: 80px;
-    z-index: 3;
-}
+.bottom-right { position: absolute; bottom: 80px; right: 80px; z-index: 3; }
 
 .cta-link {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -166,23 +133,110 @@ body {
     text-transform: uppercase;
     border-bottom: 1px solid #e5c07b;
     padding-bottom: 10px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s ease;
 }
 
-.cta-link:hover {
+.cta-link:hover { color: #e5c07b; padding-right: 12px; }
+
+/* ================= PÁGINA 2: PRODUTOS ================= */
+.produtos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.header-produtos {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header-produtos h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
     color: #e5c07b;
-    border-bottom-color: #ffffff;
-    padding-right: 12px; /* Deslocamento suave de elite */
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
-/* Animação de Entrada Cinematográfica */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.header-produtos p {
+    color: #8a8a93;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
 }
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.bloco-produto {
+    background: linear-gradient(135deg, #111113 0%, #0c0c0d 100%);
+    border: 1px solid rgba(229, 192, 123, 0.1);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.bloco-produto:hover {
+    transform: translateY(-8px);
+    border-color: #e5c07b;
+    box-shadow: 0 10px 30px rgba(229, 192, 123, 0.15);
+}
+
+.tag-produto {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: #e5c07b;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.titulo-produto {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.desc-produto {
+    font-size: 0.9rem;
+    color: #8a8a93;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    min-height: 70px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #e5c07b;
+    color: #e5c07b;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: #e5c07b;
+    color: #050505;
+}
+
+.voltar-link {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    color: #8a8a93;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.voltar-link:hover { color: #ffffff; }
