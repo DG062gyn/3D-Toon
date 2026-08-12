@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG062 — Drops Exclusivos</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="drops-container">
+        <div class="drops-content">
+            <span class="drops-tag">LIMITED ACCESS</span>
+            <h1 class="drops-titulo">PRÓXIMO DROP</h1>
+            <p class="drops-sub">A liberação ocorrerá sob demanda estrita. Apenas para membros cadastrados.</p>
+
+            <!-- O MOTOR DO CRONÔMETRO DIGITAL -->
+            <div class="countdown-wrapper">
+                <div class="countdown-box">
+                    <span id="days">00</span>
+                    <label>DIAS</label>
+                </div>
+                <div class="countdown-box">
+                    <span id="hours">00</span>
+                    <label>HORAS</label>
+                </div>
+                <div class="countdown-box">
+                    <span id="minutes">00</span>
+                    <label>MINUTOS</label>
+                </div>
+                <div class="countdown-box">
+                    <span id="seconds">00</span>
+                    <label>SEGUNDOS</label>
+                </div>
+            </div>
+
+            <div class="drops-info">
+                <p>Coleção Secreta: <strong>DROP 03 // BLACKOUT APPAREL</strong></p>
+                <p>Volume de peças: <strong>Apenas 20 unidades numeradas.</strong></p>
+            </div>
+
+            <!-- Formulário ou botão de engajamento rápido -->
+            <div class="drops-botoes">
+                <a href="https://wa.me." target="_blank" class="btn-drops">ENTRAR NA LISTA DE ESPERA</a>
+                <a href="index.html" class="voltar-link">&larr; VOLTAR AO MENU PRINCIPAL</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script interno temporário do relógio para garantir que funcione de primeira -->
+    <script>
+        // Configura o relógio para contar até 7 dias a partir de hoje automaticamente
+        const dataAlvo = new Date();
+        dataAlvo.setDate(dataAlvo.getDate() + 7);
+
+        function atualizarCronometro() {
+            const agora = new Date().getTime();
+            const diferenca = dataAlvo - agora;
+
+            // Cálculos matemáticos de tempo
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            // Injeta os números na tela com o zero na frente se for menor que 10
+            document.getElementById("days").innerText = dias < 10 ? "0" + dias : dias;
+            document.getElementById("hours").innerText = horas < 10 ? "0" + horas : horas;
+            document.getElementById("minutes").innerText = minutos < 10 ? "0" + minutos : minutos;
+            document.getElementById("seconds").innerText = segundos < 10 ? "0" + segundos : segundos;
+
+            // Se o tempo acabar
+            if (diferenca < 0) {
+                clearInterval(intervalo);
+                document.querySelector(".countdown-wrapper").innerHTML = "<h2 style='color:#e5c07b; font-family:Cinzel; letter-spacing:2px;'>DROP LIBERADO</h2>";
+            }
+        }
+
+        // Executa a função a cada 1 segundo continuamente
+        const intervalo = setInterval(atualizarCronometro, 1000);
+        atualizarCronometro(); // Executa imediatamente ao carregar
+    </script>
+        <!-- Botão Flutuante do Instagram. Depois substitua o # pelo seu link real -->
+    <a href="#" target="_blank" class="insta-flutuante" aria-label="Instagram">
+        <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+
+</body>
+</html>

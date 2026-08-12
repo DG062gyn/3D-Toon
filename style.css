@@ -271,7 +271,6 @@ body {
 }
 
 .voltar-link:hover { color: #ffffff; }
-
 /* INJEÇÃO MOBILE PROTOCOLO DE ALTO IMPACTO */
 @media (max-width: 600px) {
     .bg-title {
@@ -279,5 +278,343 @@ body {
         font-weight: 900 !important; /* Trava o peso máximo na folha de estilo mobile */
         letter-spacing: 3px !important; /* Aproxima levemente para dar massa ao texto */
         top: 15% !important; /* Mantém centralizado no topo do smartphone */
+    }
+}
+/* Efeito Premium de Iluminação nos Blocos (Hover) */
+.bloco-produto:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    border-color: #e5c07b !important;
+    /* Adiciona uma aura de luz dourada suave ao redor do bloco focado */
+    box-shadow: 0 20px 40px rgba(229, 192, 123, 0.12) !important; 
+}
+
+/* Transição de cores nos botões de compra */
+.btn-comprar {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-comprar:hover {
+    background: #e5c07b !important;
+    color: #050505 !important;
+    box-shadow: 0 0 15px rgba(229, 192, 123, 0.4) !important;
+    letter-spacing: 3px; /* As letras do botão se afastam levemente ao focar */
+}
+/* ================= PÁGINA 3: SOBRE A FIRMA ================= */
+.sobre-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-content {
+    background: linear-gradient(135deg, #111113 0%, #0c0c0d 100%);
+    border: 1px solid rgba(229, 192, 123, 0.1);
+    border-radius: 20px;
+    padding: 60px 50px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.sobre-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: #e5c07b;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sobre-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ffffff 0%, #e5c07b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #9da5b4;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.sobre-texto p.destaque {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e5c07b;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+}
+
+.sobre-texto p.destaque-final {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px solid rgba(229, 192, 123, 0.15);
+    padding-top: 25px;
+}
+
+.sobre-botoes {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-sobre {
+    display: inline-block;
+    padding: 14px 45px;
+    border: 1px solid #e5c07b;
+    color: #050505;
+    background: #e5c07b;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 20px rgba(229, 192, 123, 0.2);
+}
+
+.btn-sobre:hover {
+    background: transparent;
+    color: #e5c07b;
+    box-shadow: 0 0 30px rgba(229, 192, 123, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Ajuste mobile automático para a página sobre */
+@media (max-width: 600px) {
+    .sobre-content { padding: 40px 24px; }
+    .sobre-titulo { font-size: 1.8rem; letter-spacing: 3px; }
+    .sobre-texto p { font-size: 0.9rem; line-height: 1.7; }
+    .sobre-texto p.destaque { font-size: 1.1rem; }
+}
+/* ================= PÁGINA 4: DROPS EXCLUSIVOS ================= */
+.drops-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drops-content {
+    background: radial-gradient(circle at center, #141416 0%, #0c0c0d 100%);
+    border: 1px solid rgba(229, 192, 123, 0.1);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
+    width: 100%;
+}
+
+.drops-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: #e5c07b;
+    letter-spacing: 5px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.drops-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: #ffffff;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ffffff 0%, #e5c07b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.drops-sub {
+    font-size: 0.9rem;
+    color: #8a8a93;
+    margin-bottom: 45px;
+    letter-spacing: 1px;
+}
+
+/* Engenharia do Bloco Relógio */
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(229, 192, 123, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 15px rgba(229, 192, 123, 0.03));
+}
+
+.countdown-box span {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.countdown-box label {
+    font-size: 0.7rem;
+    color: #e5c07b;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.drops-info {
+    border-top: 1px solid rgba(229, 192, 123, 0.1);
+    border-bottom: 1px solid rgba(229, 192, 123, 0.1);
+    padding: 25px 0;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.drops-info p {
+    font-size: 0.95rem;
+    color: #9da5b4;
+    line-height: 1.8;
+}
+
+.drops-info p strong {
+    color: #ffffff;
+}
+
+.drops-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-drops {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #e5c07b;
+    color: #030303;
+    background: #e5c07b;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 20px rgba(229, 192, 123, 0.2);
+}
+
+.btn-drops:hover {
+    background: transparent;
+    color: #e5c07b;
+    box-shadow: 0 0 35px rgba(229, 192, 123, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Adaptação Mobile para o Relógio */
+@media (max-width: 600px) {
+    .drops-content { padding: 40px 20px; }
+    .drops-titulo { font-size: 2rem; letter-spacing: 4px; }
+    .countdown-wrapper { gap: 10px; }
+    .countdown-box { min-width: 75px; padding: 12px 5px; }
+    .countdown-box span { font-size: 1.6rem; }
+    .countdown-box label { font-size: 0.6rem; letter-spacing: 1px; }
+}
+/* ================= BOTÃO FLUTUANTE DO INSTAGRAM PREMIUM ================= */
+.insta-flutuante {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Posicionado no canto inferior esquerdo para não trombar com o botão do Index */
+    z-index: 9999; /* Força o botão a ficar por cima de absolutamente tudo no site */
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%); /* Cores oficiais do Insta com degradê de luxo */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: pulsoNeonInsta 2s infinite; /* Ativa a animação de pulso contínuo */
+    text-decoration: none;
+}
+
+/* Ícone interno do Instagram desenhado em linhas brancas limpas */
+.insta-flutuante svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Efeito ao passar o mouse */
+.insta-flutuante:hover {
+    transform: scale(1.1) translateY(-5px);
+    filter: brightness(1.2);
+    box-shadow: 0 15px 30px rgba(238, 42, 123, 0.4);
+}
+
+/* ANIMAÇÃO DE PULSO DE LUZ COORDENADA */
+@keyframes pulsoNeonInsta {
+    0% {
+        box-shadow: 0 0 0 0 rgba(238, 42, 123, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(238, 42, 123, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(238, 42, 123, 0);
+    }
+}
+
+/* Ajuste sutil para telas de celulares pequenos */
+@media (max-width: 600px) {
+    .insta-flutuante {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .insta-flutuante svg {
+        width: 22px;
+        height: 22px;
     }
 }
