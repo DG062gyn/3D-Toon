@@ -1,154 +1,185 @@
-/* Reset Básico */
+/* 
+   SYSTEM OVERRIDE: DESIGN SYSTEM DE ALTO ESCALÃO
+   PROTOCOLO: GRANDEUR-BLACK-GOLD
+*/
+
+@import url('https://googleapis.com');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    outline: none;
 }
 
 body {
+    background-color: #030303; /* Escuridão pura */
+    font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0f0f12;
-    color: #ffffff;
     overflow: hidden;
 }
 
-/* Card Principal */
+/* O Palco Principal: Textura Satinada de Alta Resolução */
 .card-container {
     position: relative;
-    width: 90%;
-    max-width: 1000px;
-    height: 580px;
-    background: #d881a7; /* Rosa característico do layout */
-    border-radius: 24px;
-    padding: 40px;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 40%, #111113 0%, #060607 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 80px; /* Amplo espaço de respiro aristocrático */
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    transition: background 0.5s ease;
 }
 
-/* Texto Gigante ao Fundo */
+/* Linha Perimetral Laser em Ouro Champagne */
+.card-container::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border: 1px solid rgba(229, 192, 123, 0.08);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* O NOME MONUMENTAL: Tipografia Imperial com Brilho de Ouro Líquido */
 .bg-title {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(5rem, 15vw, 11rem);
+    
+    font-family: 'Cinzel', serif;
+    font-size: clamp(4rem, 11vw, 9.5rem);
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.95);
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    /* Efeito Metalizado de Luxo */
+    background: linear-gradient(180deg, #ffffff 0%, #e5c07b 60%, #aa8443 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Neon Dourado Sutil Atrás das Letras */
+    filter: drop-shadow(0 0 30px rgba(229, 192, 123, 0.15));
+    
     white-space: nowrap;
     user-select: none;
     pointer-events: none;
     z-index: 1;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease, transform 0.4s ease;
+    letter-spacing: 12px; /* Letras super espaçadas de alto padrão */
 }
 
-/* Imagem Central 3D */
+/* Container Central Fluido */
 .main-character-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    z-index: 2;
+    position: relative;
+    width: 100%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
-.main-character-wrapper img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
-    transition: transform 0.4s ease, opacity 0.3s ease;
-}
-
-/* Informações Esquerda (Título + Descrição + Botões) */
+/* Bloco Inferior de Textos Corporativos */
 .bottom-left {
     position: relative;
     z-index: 3;
-    max-width: 320px;
-    margin-top: auto;
+    max-width: 580px;
+    animation: fadeIn 1s ease-out;
 }
 
 .product-title {
-    font-size: 0.85rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #111111;
-    margin-bottom: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #e5c07b; /* Ouro Nobre */
+    margin-bottom: 14px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .product-desc {
-    font-size: 0.75rem;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.75);
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    font-weight: 200; /* Tipografia ultra fina premium */
+    color: #9da5b4;
+    line-height: 1.8;
+    margin-bottom: 35px;
 }
 
-/* Botões de Navegação */
+/* Botões Lapidados como Joias Circulares */
 .nav-buttons {
     display: flex;
-    gap: 12px;
+    gap: 20px;
 }
 
 .nav-btn {
-    width: 44px;
-    height: 44px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 1.5px solid rgba(0, 0, 0, 0.25);
-    background: transparent;
+    border: 1px solid rgba(229, 192, 123, 0.25);
+    background: rgba(255, 255, 255, 0.01);
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.25s ease;
-}
-
-.nav-btn svg {
-    width: 20px;
-    height: 20px;
-    stroke: #000000;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-btn:hover {
-    background: #000000;
-    border-color: #000000;
+    background: #e5c07b;
+    color: #030303;
+    border-color: #e5c07b;
+    box-shadow: 0 0 30px rgba(229, 192, 123, 0.35);
+    transform: translateY(-2px);
 }
 
-.nav-btn:hover svg {
-    stroke: #ffffff;
+.nav-btn svg {
+    width: 22px;
+    height: 22px;
 }
 
-/* Call to Action (Direita) */
+/* Link de Acesso Exclusivo (Direita) */
 .bottom-right {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 80px;
+    right: 80px;
     z-index: 3;
 }
 
 .cta-link {
-    font-weight: 800;
-    font-size: 1rem;
-    color: #111111;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #ffffff;
     text-decoration: none;
-    letter-spacing: 1px;
-    transition: transform 0.2s ease;
-    display: inline-block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e5c07b;
+    padding-bottom: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cta-link:hover {
-    transform: translateX(5px);
+    color: #e5c07b;
+    border-bottom-color: #ffffff;
+    padding-right: 12px; /* Deslocamento suave de elite */
+}
+
+/* Animação de Entrada Cinematográfica */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
