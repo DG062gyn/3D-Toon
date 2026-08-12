@@ -49,6 +49,7 @@ body {
 }
 
 /* O NOME MONUMENTAL: Tipografia Imperial com Brilho de Ouro Líquido */
+/* O NOME MONUMENTAL: Tipografia Imperial com Brilho de Ouro Líquido */
 .bg-title {
     position: absolute;
     top: 45%;
@@ -62,6 +63,7 @@ body {
     
     /* Efeito Metalizado de Luxo */
     background: linear-gradient(180deg, #ffffff 0%, #e5c07b 60%, #aa8443 100%);
+    background-clip: text; /* Versão padrão universal para o editor ficar feliz */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -72,8 +74,9 @@ body {
     user-select: none;
     pointer-events: none;
     z-index: 1;
-    letter-spacing: 12px; /* Letras super espaçadas de alto padrão */
+    letter-spacing: 12px;
 }
+
 
 /* Container Central Fluido */
 .main-character-wrapper {
