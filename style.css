@@ -57,7 +57,7 @@ body {
     transform: translate(-50%, -50%);
     
     font-family: 'Cinzel', serif;
-    font-size: clamp(4rem, 11vw, 9.5rem);
+    font-size: clamp(2rem, 5vw, 5.5rem);
     font-weight: 900;
     text-transform: uppercase;
     
