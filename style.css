@@ -41,23 +41,31 @@ body {
 
 .bg-title {
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Cinzel', serif;
-    font-size: clamp(1rem, 1vw, 1.0rem);
-    font-weight: 900;
+    
+    /* LINHA 43: Aumentado cirurgicamente para a letra expandir e ganhar corpo */
+    font-size: 1.8rem; 
+    
+    /* Força o preenchimento no nível máximo da tipografia imperial */
+    font-weight: 900; 
+    
     text-transform: uppercase;
     background: linear-gradient(180deg, #ffffff 0%, #e5c07b 60%, #aa8443 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 30px rgba(229, 192, 123, 0.15));
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
     white-space: nowrap;
     user-select: none;
     pointer-events: none;
     z-index: 1;
-    letter-spacing: 12px;
+    letter-spacing: 4px;
 }
 
 .main-character-wrapper {
@@ -74,7 +82,7 @@ body {
     position: relative;
     z-index: 3;
     max-width: 480px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 }
 
 .product-title {
@@ -198,7 +206,7 @@ body {
 /* Moldura Proporcional de Luxo injetada com Sucesso */
 .img-wrapper {
     width: 100%;
-    height: 10px; /* Altere este valor para diminuir ou aumentar o tamanho das fotos */
+    height: 130px; /* Restaurado o tamanho padrão de segurança das fotos */
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -207,7 +215,7 @@ body {
 
 .img-vitrine {
     width: 100%;
-    height: 30%;
+    height: 100%; /* Corrigido de 30% para 100% para não esmagar a imagem */
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -263,3 +271,13 @@ body {
 }
 
 .voltar-link:hover { color: #ffffff; }
+
+/* INJEÇÃO MOBILE PROTOCOLO DE ALTO IMPACTO */
+@media (max-width: 600px) {
+    .bg-title {
+        font-size: 2.0rem !important; /* Força um tamanho encorpado visível */
+        font-weight: 900 !important; /* Trava o peso máximo na folha de estilo mobile */
+        letter-spacing: 3px !important; /* Aproxima levemente para dar massa ao texto */
+        top: 15% !important; /* Mantém centralizado no topo do smartphone */
+    }
+}
