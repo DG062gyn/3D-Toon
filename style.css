@@ -41,11 +41,11 @@ body {
 
 .bg-title {
     position: absolute;
-    top: 45%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Cinzel', serif;
-    font-size: clamp(2rem, 6vw, 4.6rem);
+    font-size: clamp(1rem, 1vw, 1.0rem);
     font-weight: 900;
     text-transform: uppercase;
     background: linear-gradient(180deg, #ffffff 0%, #e5c07b 60%, #aa8443 100%);
@@ -73,7 +73,8 @@ body {
 .bottom-left {
     position: relative;
     z-index: 3;
-    max-width: 580px;
+    max-width: 480px;
+    margin-bottom: 80px;
 }
 
 .product-title {
