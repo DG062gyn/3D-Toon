@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Toon Animation Showcase</title>
+    <!-- Fonte moderna do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card-container">
+        <!-- Background Text (Efeito de texto gigante atrás do personagem) -->
+        <h1 id="bg-title" class="bg-title">3D SHAPE</h1>
+
+        <!-- Imagem Principal Central -->
+        <div class="main-character-wrapper">
+            <img id="main-image" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="3D Character Main">
+        </div>
+
+        <!-- Seção Inferior Esquerda: Texto + Botões -->
+        <div id="bottom-left" class="bottom-left">
+            <p id="product-title" class="product-title">TOONHUB FIGURINES</p>
+            <p id="product-desc" class="product-desc">
+                The artwork is stunning, shipped fully prepared. The finish is a vision, the 3D craft is flawless. Many thanks! Wishing you the win. Order now.
+            </p>
+
+            <div id="nav-buttons" class="nav-buttons">
+                <button class="nav-btn" id="btn-prev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="nav-btn" id="btn-next" aria-label="Next">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Seção Inferior Direita: Link/Call to Action -->
+        <div class="bottom-right">
+            <a href="#" class="cta-link">DISCOVER IT &rarr;</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

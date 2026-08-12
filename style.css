@@ -1,0 +1,154 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f0f12;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Card Principal */
+.card-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 580px;
+    background: #d881a7; /* Rosa característico do layout */
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    transition: background 0.5s ease;
+}
+
+/* Texto Gigante ao Fundo */
+.bg-title {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(5rem, 15vw, 11rem);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 2px;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+/* Imagem Central 3D */
+.main-character-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-character-wrapper img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Informações Esquerda (Título + Descrição + Botões) */
+.bottom-left {
+    position: relative;
+    z-index: 3;
+    max-width: 320px;
+    margin-top: auto;
+}
+
+.product-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #111111;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.product-desc {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Botões de Navegação */
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 0, 0, 0.25);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000000;
+}
+
+.nav-btn:hover {
+    background: #000000;
+    border-color: #000000;
+}
+
+.nav-btn:hover svg {
+    stroke: #ffffff;
+}
+
+/* Call to Action (Direita) */
+.bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 3;
+}
+
+.cta-link {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #111111;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.cta-link:hover {
+    transform: translateX(5px);
+}
