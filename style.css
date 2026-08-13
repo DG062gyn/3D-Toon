@@ -27,7 +27,6 @@ body {
     padding: 60px 40px; /* Reduz o padding para os elementos respirarem no celular */
     margin: 0 auto; /* Centraliza o celular perfeitamente no meio do monitor */
     overflow: hidden;
-    border: 2px solid #d6a448; /* Opcional: adiciona uma borda externa simulando o aparelho */
 }
 
 
@@ -38,10 +37,12 @@ body {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    border: 1px solid rgba(229, 192, 123, 0.08);
+    border: none !important; /* Desativa e elimina a linha dourada perimetral sutil */
+    display: none !important; /* Força o navegador a omitir o desenho do bloco falso */
     pointer-events: none;
     z-index: 10;
 }
+
 
 
 .bg-title {
