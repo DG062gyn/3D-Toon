@@ -17,27 +17,32 @@ body {
 /* ================= PÁGINA 1: INDEX ================= */
 .card-container {
     position: relative;
-    width: 100vw;
+    width: 100%;
+    max-width: 400px; /* Trava o tamanho máximo simulando o celular */
     height: 100vh;
     background: radial-gradient(circle at 50% 40%, #111113 0%, #060607 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 80px;
+    padding: 60px 40px; /* Reduz o padding para os elementos respirarem no celular */
+    margin: 0 auto; /* Centraliza o celular perfeitamente no meio do monitor */
     overflow: hidden;
+    border: 2px solid #d6a448; /* Opcional: adiciona uma borda externa simulando o aparelho */
 }
+
 
 .card-container::before {
     content: '';
     position: absolute;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
     border: 1px solid rgba(229, 192, 123, 0.08);
     pointer-events: none;
     z-index: 10;
 }
+
 
 .bg-title {
     position: absolute;
@@ -130,7 +135,14 @@ body {
 
 .nav-btn svg { width: 22px; height: 22px; }
 
-.bottom-right { position: absolute; bottom: 80px; right: 80px; z-index: 3; }
+.bottom-right { 
+    position: relative; /* Mudado de absolute para se comportar de forma flexível */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center; 
+    z-index: 3; 
+}
+
 
 .cta-link {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -303,7 +315,7 @@ body {
 .sobre-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 100px 24px;
+    padding: 20px 18px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
